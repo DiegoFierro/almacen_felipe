@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{ site.Title }}</title>
+  <meta name="description" content="{{ site.Params.description }}">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0e1311">
+
+  <!-- PWA -->
+  <link rel="manifest" href="{{ "manifest.webmanifest" | relURL }}">
+  <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ "icons/apple-touch-icon.png" | relURL }}">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="{{ site.Params.brand }}">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <!-- Aplica el tema antes de pintar (evita el "flash"). Oscuro por defecto. -->
+  <script>
+    (function () {
+      var t = 'dark';
+      try {
+        var s = localStorage.getItem('af-theme');
+        if (s === 'light' || s === 'dark') t = s;
+      } catch (e) {}
+      document.documentElement.setAttribute('data-theme', t);
+      var m = document.querySelector('meta[name="theme-color"]');
+      if (m) m.setAttribute('content', t === 'light' ? '#f4f7f5' : '#0e1311');
+    })();
+  </script>
+
+  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+</head>
+<body>
+  <div class="app">
+    {{ block "main" . }}{{ end }}
+  </div>
+  {{ partial "scripts.html" . }}
+</body>
+</html>

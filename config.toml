@@ -1,0 +1,11 @@
+baseURL = 'https://example.org/'
+languageCode = 'es-AR'
+title = 'Consulta de Precios - Almacén Felipe'
+
+# Sitio de una sola página: no hace falta generar nada más
+disableKinds = ['RSS', 'sitemap', 'robotsTXT', 'taxonomy', 'term', 'section']
+
+[params]
+  brand = 'Almacén Felipe'
+  tagline = 'Consulta de precios'
+  description = 'Consultá los precios de los productos del Almacén Felipe.'

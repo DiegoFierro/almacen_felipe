@@ -1,0 +1,14 @@
+<main id="results" class="results" aria-live="polite">
+  <div class="statusbar">
+    <p id="count" class="count">Cargando precios…</p>
+    <div class="sync">
+      <span id="syncText" class="sync-text"></span>
+      <button type="button" id="refreshBtn" class="icon-btn" aria-label="Actualizar precios" title="Actualizar precios">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <ul id="productList" class="list" aria-busy="true"></ul>
+  <div id="emptyState" class="empty" hidden></div>
+</main>

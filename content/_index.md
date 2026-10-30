@@ -1,0 +1,3 @@
+---
+title: "Consulta de Productos"
+---

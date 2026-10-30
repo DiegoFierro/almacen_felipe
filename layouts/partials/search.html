@@ -1,0 +1,33 @@
+<div class="searchbar">
+  <form id="searchForm" class="search" role="search" autocomplete="off" novalidate>
+    <div class="field">
+      <label for="searchInput" class="sr-only">Buscar producto o marca</label>
+      <input
+        id="searchInput"
+        name="q"
+        type="search"
+        placeholder="Producto o marca…"
+        inputmode="search"
+        enterkeyhint="search"
+        autocomplete="off"
+        autocapitalize="none"
+        autocorrect="off"
+        spellcheck="false"
+        role="combobox"
+        aria-autocomplete="list"
+        aria-expanded="false"
+        aria-controls="suggestions"
+      >
+      <button type="button" id="clearBtn" class="clear" aria-label="Borrar búsqueda" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+
+    <button type="submit" class="btn-search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <span>Buscar</span>
+    </button>
+
+    <ul id="suggestions" role="listbox" aria-label="Sugerencias" hidden></ul>
+  </form>
+</div>
